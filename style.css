@@ -1,0 +1,380 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    color: #172554;
+    background: #edf5ff;
+}
+
+/* NAVBAR */
+.navbar {
+    width: 100%;
+    min-height: 76px;
+    padding: 18px 8%;
+    background: #07152e;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.18);
+}
+
+.logo {
+    color: #fff;
+    text-decoration: none;
+    font-size: 23px;
+    font-weight: 700;
+    white-space: nowrap;
+}
+
+.logo::first-letter {
+    color: #fbbf24;
+}
+
+.nav-links {
+    display: flex;
+    gap: 32px;
+}
+
+.nav-links a {
+    color: #dbeafe;
+    text-decoration: none;
+    font-size: 14px;
+    transition: color 0.3s;
+}
+
+.nav-links a:hover {
+    color: #fbbf24;
+}
+
+/* HERO */
+.hero {
+    min-height: 390px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 65px 20px;
+    color: white;
+
+    /* Uses your existing mountain image */
+    background:
+        linear-gradient(90deg, rgba(4, 14, 37, 0.72),
+        rgba(4, 14, 37, 0.22)),
+        url("images/mountain_landscape.avif");
+
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.hero-content {
+    max-width: 750px;
+}
+
+.hero-tag,
+.section-tag {
+    color: #fbbf24;
+    letter-spacing: 3px;
+    font-size: 11px;
+    font-weight: 700;
+    margin-bottom: 14px;
+}
+
+.hero h1 {
+    font-size: clamp(38px, 6vw, 68px);
+    line-height: 1.15;
+    font-weight: 800;
+    margin-bottom: 18px;
+    text-shadow: 0 4px 18px rgba(0, 0, 0, 0.35);
+}
+
+.hero-description {
+    color: #f1f5f9;
+    font-size: 15px;
+    margin-bottom: 30px;
+}
+
+.explore-btn {
+    display: inline-block;
+    padding: 13px 26px;
+    background: #fbbf24;
+    color: #10203d;
+    text-decoration: none;
+    font-weight: 700;
+    font-size: 13px;
+    border-radius: 30px;
+    transition: 0.3s;
+}
+
+.explore-btn:hover {
+    background: white;
+    transform: translateY(-3px);
+}
+
+/* GALLERY */
+.gallery-section {
+    padding: 65px 7% 75px;
+    background: linear-gradient(180deg, #edf5ff, #e2edff);
+}
+
+.section-heading {
+    text-align: center;
+    margin-bottom: 36px;
+}
+
+.section-tag {
+    color: #4776bd;
+    margin-bottom: 8px;
+}
+
+.section-heading h2 {
+    font-size: clamp(27px, 4vw, 38px);
+    color: #10203d;
+    margin-bottom: 10px;
+}
+
+.section-heading > p:last-child {
+    color: #64748b;
+    font-size: 14px;
+}
+
+/* FOUR CARDS PER ROW */
+.gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 24px;
+}
+
+.gallery-card {
+    background: #fff;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 8px 25px rgba(25, 53, 91, 0.10);
+    cursor: pointer;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.gallery-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 16px 32px rgba(25, 53, 91, 0.18);
+}
+
+.card-image-wrap {
+    height: 175px;
+    overflow: hidden;
+    position: relative;
+    background: #dbeafe;
+}
+
+.card-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    transition: transform 0.5s;
+}
+
+.gallery-card:hover .card-image {
+    transform: scale(1.08);
+}
+
+.card-number {
+    position: absolute;
+    top: 12px;
+    left: 12px;
+    background: rgba(7, 21, 46, 0.78);
+    color: white;
+    padding: 5px 10px;
+    font-size: 11px;
+    border-radius: 20px;
+}
+
+.card-info {
+    padding: 16px;
+}
+
+.card-info h3 {
+    color: #10203d;
+    font-size: 15px;
+    margin-bottom: 6px;
+}
+
+.card-info p {
+    color: #718096;
+    font-size: 12px;
+}
+
+.location-icon {
+    color: #4776bd;
+    margin-right: 4px;
+}
+
+/* ABOUT */
+.about-section {
+    padding: 48px 20px;
+    text-align: center;
+    background: #07152e;
+    color: white;
+}
+
+.about-section h2 {
+    font-size: 25px;
+    margin-bottom: 12px;
+}
+
+.about-section p {
+    color: #cbd5e1;
+    font-size: 13px;
+}
+
+/* FOOTER */
+footer {
+    text-align: center;
+    padding: 20px;
+    background: #050f22;
+    color: #94a3b8;
+    font-size: 12px;
+}
+
+/* LIGHTBOX */
+.lightbox {
+    display: none;
+    position: fixed;
+    inset: 0;
+    z-index: 1000;
+    background: rgba(2, 8, 23, 0.94);
+    align-items: center;
+    justify-content: center;
+    padding: 60px 75px;
+}
+
+.lightbox.active {
+    display: flex;
+}
+
+.lightbox-content {
+    text-align: center;
+    max-width: 850px;
+    width: 100%;
+}
+
+.lightbox-content img {
+    max-width: 100%;
+    max-height: 70vh;
+    object-fit: contain;
+    border-radius: 12px;
+    box-shadow: 0 10px 35px rgba(0, 0, 0, 0.4);
+}
+
+.lightbox-content h2 {
+    color: white;
+    margin-top: 16px;
+    font-size: 22px;
+}
+
+.lightbox-content p {
+    color: #cbd5e1;
+    margin-top: 5px;
+    font-size: 14px;
+}
+
+.close-btn,
+.prev-btn,
+.next-btn {
+    position: absolute;
+    border: none;
+    color: white;
+    cursor: pointer;
+    background: rgba(255, 255, 255, 0.12);
+    border-radius: 50%;
+    width: 45px;
+    height: 45px;
+    font-size: 25px;
+    transition: background 0.2s;
+}
+
+.close-btn:hover,
+.prev-btn:hover,
+.next-btn:hover {
+    background: #315b99;
+}
+
+.close-btn {
+    top: 25px;
+    right: 30px;
+    font-size: 32px;
+}
+
+.prev-btn {
+    left: 20px;
+}
+
+.next-btn {
+    right: 20px;
+}
+
+/* RESPONSIVE */
+@media (max-width: 1000px) {
+    .gallery-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .card-image-wrap {
+        height: 200px;
+    }
+}
+
+@media (max-width: 600px) {
+    .navbar {
+        padding: 16px 5%;
+        flex-direction: column;
+    }
+
+    .nav-links {
+        gap: 22px;
+    }
+
+    .hero {
+        min-height: 340px;
+    }
+
+    .gallery-section {
+        padding: 45px 5%;
+    }
+
+    .gallery-grid {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+
+    .card-image-wrap {
+        height: 220px;
+    }
+
+    .lightbox {
+        padding: 60px 15px;
+    }
+
+    .prev-btn {
+        left: 8px;
+    }
+
+    .next-btn {
+        right: 8px;
+    }
+}

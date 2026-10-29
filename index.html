@@ -1,0 +1,67 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Travel Gallery | Explore the World</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <nav class="navbar">
+        <a href="#home" class="logo">✦ Travel Gallery</a>
+
+        <div class="nav-links">
+            <a href="#home">Home</a>
+            <a href="#gallery">Gallery</a>
+            <a href="#about">About</a>
+        </div>
+    </nav>
+
+    <header class="hero" id="home">
+        <div class="hero-content">
+            <p class="hero-tag">DISCOVER • EXPLORE • EXPERIENCE</p>
+            <h1>Explore the World</h1>
+            <p class="hero-description">
+                Discover beautiful places and collect unforgettable memories.
+            </p>
+            <a href="#gallery" class="explore-btn">Explore Gallery ↓</a>
+        </div>
+    </header>
+
+    <main class="gallery-section" id="gallery">
+        <div class="section-heading">
+            <p class="section-tag">YOUR NEXT ADVENTURE</p>
+            <h2>My Image Gallery</h2>
+            <p>Beautiful destinations, captured in one place.</p>
+        </div>
+
+        <div class="gallery-grid" id="galleryGrid"></div>
+    </main>
+
+    <section class="about-section" id="about">
+        <h2>Every Picture Tells a Story</h2>
+        <p>Explore amazing destinations and find inspiration for your next journey.</p>
+    </section>
+
+    <footer>
+        <p>© 2026 Travel Gallery | Made with ♥ for travel lovers</p>
+    </footer>
+
+    <div class="lightbox" id="lightbox">
+        <button class="close-btn" id="closeBtn" aria-label="Close image">&times;</button>
+        <button class="prev-btn" id="prevBtn" aria-label="Previous image">&#10094;</button>
+
+        <div class="lightbox-content">
+            <img src="" alt="Selected destination" id="lightboxImage">
+            <h2 id="lightboxTitle"></h2>
+            <p id="lightboxLocation"></p>
+        </div>
+
+        <button class="next-btn" id="nextBtn" aria-label="Next image">&#10095;</button>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
